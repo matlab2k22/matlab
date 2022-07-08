@@ -1,0 +1,25 @@
+cf=0.8;
+ph=50;
+mh=100;
+ t=1423;
+ w=10000;
+ ct=20;
+ d=7.890;
+ mth=ph+mh;
+ pt=3.5;
+ g=9.8;
+ GrR=2;
+ GrI=1.5;
+ p=0.5;
+ C=3;
+ P=1.4;
+ Si=1.5;
+ v=cf*sqrt(2*g*mth)
+ pr=(w^p)/(1.34+(ct/13.77));
+ ce=(C+(0.25*Si)+(0.5*P));
+ k=(14.9*ce)+((0.05*t)-1.55);
+ PrA=pr/k*cf;
+ As=PrA/d*v
+ Ar=As*GrR
+ Ai=As*GrI
+ 

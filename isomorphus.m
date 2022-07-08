@@ -1,0 +1,18 @@
+Tma=800;
+Tmb=500;
+Ha=30000;
+Hb=20000;
+R=8.314;
+T=800:-5:500;
+Fa=(Ha./(R.*T.*Tma)).*(Tma-T);
+Fb=(Hb./(R.*T.*Tmb)).*(Tmb-T);
+S=exp(Fa);
+R=exp(Fb);
+Nbl=(1-S)./(R-S);
+Nba=(Nbl.*(R));
+plot(Nba,T);
+hold on;
+plot(Nbl,T);
+xlabel('Composition');
+ylabel('Temperature in Kelvin');
+title(sprintf('Isomorphus Phase Diagram rollnum'));
